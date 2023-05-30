@@ -1,0 +1,416 @@
+:root {
+    --primary: #b6895b;
+    --bg: #010101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
+    color: white;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #98734e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+
+.navbar .navbar-nav a {
+    color: white;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    display: block;
+    content: '';
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.7);
+}
+
+.navbar .navbar-extra a {
+    color: white;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* akhir navbar */
+
+
+/* hero section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0)35%);
+}
+
+.hero .content {
+    z-index: 1;
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5em;
+    text-shadow: 1px 3px 5px rgba(1, 1, 1, 0.5);
+    line-height: 1;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 1.6rem;
+    font-weight: 100;
+    text-shadow: 1px 1px 1px rgba(1, 1, 1, 0.5);
+    mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 3px 3px rgba(1, 1, 1, 0.5);
+}
+
+/* akhir hero section */
+
+
+/* about section */
+.about,
+.menu,
+.kontak {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.kontak h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.kontak h2 span {
+    color: var(--primary);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+
+}
+
+.about .row .about-img img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.about .row .content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+/* akhir about section */
+
+/* menu section */
+.menu p,
+.kontak p {
+    text-align: center;
+    max-width: 30rem;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.menu h2,
+.kontak h2 {
+    margin-bottom: 0.5rem;
+}
+
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.menu .row .menu-card {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img {
+    border-radius: 50%;
+    width: 80%;
+}
+
+.menu .row .menu-card .menu-card-title {
+    margin: 1.5rem auto 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* akhir menu section */
+
+/* kontak section */
+.kontak .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #222;
+
+}
+
+.kontak .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.kontak .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.kontak .row form .input-group {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    background-color: var(--bg);
+    border: 1px solid white;
+    padding-left: 2rem;
+}
+
+.kontak .row form .input-group input {
+    background: none;
+    color: white;
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+}
+
+.kontak .row form .btn {
+    margin: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    background-color: var(--primary);
+    cursor: pointer;
+    color: white;
+
+}
+
+/* akhir kontak section */
+
+/* footer */
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+footer .social a {
+    color: white;
+    margin: 1rem;
+}
+
+footer .social a:hover {
+    color: var(--bg);
+}
+
+footer .link {
+    margin: 1rem 0;
+}
+
+footer .link a {
+    padding: 0.7rem 1rem;
+    color: white;
+}
+
+footer .link a:hover {
+    color: var(--bg);
+}
+
+footer .credit a {
+    color: var(--bg);
+}
+
+footer .credit a:hover {
+    color: white;
+}
+
+/* akhir footer */
+
+
+
+
+/* media Queries */
+
+/* laptope */
+@media (max-width:1366px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+
+/* tablet */
+@media (max-width:768px) {
+    html {
+        font-size: 70%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: white;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: #010101;
+        display: block;
+        margin: 1rem;
+        padding: 0.3rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .content {
+        padding: 0;
+    }
+
+    .kontak .row {
+        flex-wrap: wrap;
+    }
+
+    .kontak .row .map {
+        height: 30rem;
+    }
+
+    .kontak .row form {
+        padding-top: 0;
+    }
+}
+
+
+/* phone */
+@media (max-width:450px) {
+    html {
+        font-size: 60%;
+    }
+}
