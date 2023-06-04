@@ -122,6 +122,60 @@ body {
 
 /* akhir search form */
 
+/* shopping cart */
+.shopping-cart {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 35rem;
+    padding: 0 1.5rem;
+    color: var(--bg);
+    background-color: white;
+    transition: 0.5s;
+}
+
+.shopping-cart.active {
+    right: 0;
+}
+
+.shopping-cart .cart-item {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #333;
+    position: relative;
+}
+
+.shopping-cart img {
+    height: 6rem;
+    border-radius: 50%;
+}
+
+
+.shopping-cart .item-detail h3 {
+    font-size: 1.6rem;
+    padding-bottom: 0.5rem;
+}
+
+.shopping-cart .item-price {
+    font-size: 1.2rem;
+}
+
+.shopping-cart .hapus-item {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.shopping-cart .hapus-item:hover {
+    color: var(--primary);
+}
+
+/* akhir shopping cart */
+
 /* akhir navbar */
 
 
@@ -188,13 +242,15 @@ body {
 /* about section */
 .about,
 .menu,
-.kontak {
+.kontak,
+.produk {
     padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
-.kontak h2 {
+.kontak h2,
+.produk h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -202,7 +258,8 @@ body {
 
 .about h2 span,
 .menu h2 span,
-.kontak h2 span {
+.kontak h2 span,
+.produk h2 span {
     color: var(--primary);
 }
 
@@ -278,6 +335,78 @@ body {
 }
 
 /* akhir menu section */
+
+/* produk section */
+.produk .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.produk .produk-card {
+    text-align: center;
+    border: 1px solid #666;
+    padding: 2rem;
+}
+
+.produk .produk-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.produk .produk-icons a {
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    margin: 0.3rem;
+    border: 1px solid #666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produk .produk-icons a:hover {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.produk .produk-img {
+    padding: 1rem 0;
+}
+
+.produk .produk-img img {
+    height: 25rem;
+}
+
+.produk .produk-contnent h3 {
+    font-size: 2rem;
+}
+
+.produk .produk-content .produk-star {
+    font-size: 2rem;
+    padding: 0.8rem;
+    color: var(--primary);
+}
+
+.produk .produk-content .produk-star .star-full {
+    fill: var(--primary);
+}
+
+.produk .produk-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.produk .produk-price span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+/* akhir produk section */
 
 /* kontak section */
 .kontak .row {
