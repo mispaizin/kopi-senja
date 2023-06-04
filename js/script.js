@@ -23,7 +23,7 @@ const cartItem = document.querySelector('.cart-item')
 // ketika tombol di klik
 document.querySelector('#shopping-cart-button').onclick = (e) => {
     shoppingCart.classList.toggle('active')
-    e.preventDefault
+    e.preventDefault()
 }
 
 // klik di luar untuk menghilangkan 
@@ -49,5 +49,27 @@ document.addEventListener('click', function (e) {
     }
 })
 
+// modal box
+const itemDetailModal = document.querySelector('#item-detail-modal')
+const itemDetailButtons = document.querySelectorAll('.item-detail-button')
+
+itemDetailButtons.forEach((btn) => {
+    btn.onclick = (e) => {
+        itemDetailModal.style.display = 'flex'
+        e.preventDefault()
+    }
+})
 
 
+// klik tombol close
+document.querySelector('.modal .icons-close').onclick = (e) => {
+    itemDetailModal.style.display = 'none'
+    e.preventDefault()
+}
+
+// klik di luar modal
+window.onclick = (e) => {
+    if (e.target === itemDetailModal) {
+        itemDetailModal.style.display = 'none'
+    }
+}
